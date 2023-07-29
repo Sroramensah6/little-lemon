@@ -16,14 +16,6 @@
     margin-top: 2rem;
 }
 
-.hero-text-box > .hero-header > h5 {
-    margin-top: 0.31rem;
-}
-
-.hero-text-box > .hero-text {
-    margin-top: 0.51rem;
-}
-
 .hero-btn-box {
     margin-top: 3rem;
 }
@@ -35,7 +27,7 @@
 }
 
 .hero-header > h5{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     color: #ffffff;
     font-family: 'Markazi Text';
     font-size: 40px;

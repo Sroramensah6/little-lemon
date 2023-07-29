@@ -46,6 +46,14 @@
     }
 }
 
+@media (max-width: 950px){
+    .testimonial-card-section {
+        grid-template-columns: repeat(2, 12fr);
+        margin: 3rem auto;
+        gap: 0 1rem;
+    }
+}
+
 @media (max-width: 841px){
     .testimonial-title {
         font-size: 34px;
