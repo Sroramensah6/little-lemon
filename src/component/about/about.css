@@ -1,0 +1,110 @@
+#about {
+    padding: 3rem 0;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 12fr);
+    /* padding: 0 3.2rem; */
+    margin: 0 auto;
+    /* align-items: center; */
+    gap: 0 9.6rem;
+}
+
+.about-text-box > .about-header > h5 {
+    margin-top: 0.31rem;
+}
+
+.about-text-box > .about-text {
+    margin-top: 0.51rem;
+}
+
+.about-header > h3{
+    color: #F4C314;
+    font-family: 'Markazi Text';
+    font-size: 64px;
+}
+
+.about-header > h5{
+    color: #ffffff;
+    font-family: 'Markazi Text';
+    font-size: 40px;
+}
+
+.about-text > p{
+    color: #ffffff;
+    font-family: 'karla';
+    font-size: 23px;
+}
+
+.about-img {
+    width: 378px;
+    height: 493px;
+}
+
+@media (max-width: 1000px){
+    .about-img {
+        width: auto;
+        height: 393px;
+    }
+
+    .about-header > h3{
+        font-size: 44px;
+    }
+
+    .about-header > h5{
+        font-size: 20px;
+    }
+
+    .about-header > p{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 841px){
+    #about {
+        padding: 1rem 0;
+    }
+    .about-section {
+        display: grid;
+        grid-template-columns: repeat(2, 12fr);
+        gap: 0 1rem;
+    }
+
+    .about-header > h3{
+        font-size: 34px;
+    }
+
+    .about-header > h5{
+        font-size: 20px;
+    }
+
+    .about-text > p{
+        font-size: 14px;
+    }
+
+    .about-img {
+        width: auto;
+        height: 303px;
+    }
+
+    .about-img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 412px){
+    .about-section {
+        display: flex;
+        flex-direction: column-reverse;
+        /* grid-template-columns: repeat(1, 12fr); */
+        /* gap: 0 1rem; */
+    }
+
+    .about-img-box {
+        /* display: none; */
+    }
+}

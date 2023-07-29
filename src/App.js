@@ -1,11 +1,11 @@
 import './App.css';
-import { Footer, Layout, Nav } from './component'
+import { Footer, Main, Nav } from './component'
 
 function App() {
   return (
     <>
       <Nav />
-      <Layout />
+      <Main />
       <Footer />
     </>
   );

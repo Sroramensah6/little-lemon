@@ -1,1 +1,7 @@
 export { default as logo } from './icons_assets/Logo.svg'
+export { default as star } from './icons_assets/star.svg'
+export { default as bruchetta } from './icons_assets/bruchetta.svg'
+export { default as greek_salad } from './icons_assets/greek salad.jpg'
+export { default as lemon_dessert } from './icons_assets/lemon dessert.jpg'
+export { default as restaurant_food } from './icons_assets/restaurantfood.jpg'
+export { default as hamburger } from './icons_assets/🦆 icon _hamburger menu_.svg'
