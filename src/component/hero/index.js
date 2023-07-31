@@ -1,11 +1,15 @@
 import React from 'react'
 import './hero.css'
+
+import Image from '../image'
+import Button from '../button'
+import Container from '../container'
 import { restaurant_food } from '../../assets'
 
 function Hero() {
     return (
         <section id="hero" className='primary-background'>
-            <main className="container">
+            <Container>
                 <header className="hero-header">
                     <h3>Little Lemon</h3>
                     <h5>Chicago</h5>
@@ -20,15 +24,13 @@ function Hero() {
                         </article>
                     </section>
                     <section className="hero-img-box">
-                        <img className="hero-img" src={restaurant_food} alt="restaurant food" />
+                        <Image className="hero-img" src={restaurant_food} alt="restaurant food" />
                     </section>
                 </section>
                 <section className="hero-btn-box">
-                    <button className="btn">
-                        Reserve a table
-                    </button>
+                    <Button title={"Reserve a table"} />
                 </section>
-            </main>
+            </Container>
         </section>
     )
 }
