@@ -1,39 +1,33 @@
 import React from 'react'
 
 import './specials.css'
-import FoodCard from '../food-card'
-import { bruchetta, greek_salad, lemon_dessert } from '../../assets'
+
+import Button from '../button'
+import FoodCard from './food-card'
+import Container from '../container'
+
+import { food_data } from '../../data'
 
 function Specials() {
     return (
         <section id="special" className='secondary-background'>
-            <main className="container">
+            <Container>
                 <section className='special-header'>
                     <h1 className='special-title'>This weeks Specials</h1>
-                    <button className="btn special-btn">On The Menu</button>
+                    <Button className="special-btn" title={"On The Menu"} />
                 </section>
-                {/* <section className='special-card-section'> */}
                 <section className='inner-wrapper-flex'>
-                    <FoodCard
-                        price={'$ 5.99'}
-                        img_src={greek_salad}
-                        title={'Greek salad'}
-                        content={'We are a family owned Mediterranean restaurant, focused on traditional recipes'}
-                    />
-                    <FoodCard
-                        price={'$ 5.99'}
-                        img_src={lemon_dessert}
-                        title={'Lemon dessert'}
-                        content={'We are a family owned Mediterranean restaurant, focused on traditional recipes'}
-                    />
-                    <FoodCard
-                        price={'$ 5.99'}
-                        img_src={bruchetta}
-                        title={'Bruchetta'}
-                        content={'We are a family owned Mediterranean restaurant, focused on traditional recipes'}
-                    />
+                    {food_data.map((food) => (
+                        <FoodCard
+                            key={food.id}
+                            price={food.price}
+                            img_src={food.image}
+                            title={food.title}
+                            content={food.description}
+                        />
+                    ))}
                 </section>
-            </main>
+            </Container>
         </section>
     )
 }
