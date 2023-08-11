@@ -19,6 +19,7 @@ function Testimonial() {
                             key={item.id}
                             name={item.name}
                             img_url={item.img}
+                            rating={item.rating}
                             body={item.testimony}
                         />
                     ))}

@@ -6,9 +6,9 @@ function NavBar() {
     return (
         <header id="navbar">
             <nav className="navbar-container container">
-                <img src={hamburger} class='hamburger' alt="hamburger icon" />
-                <img class='logo' src={logo} alt="little lemon logo" />
-                <ul class="nav-items">
+                <img src={hamburger} className='hamburger' alt="hamburger icon" />
+                <img className='logo' src={logo} alt="little lemon logo" />
+                <ul className="nav-items">
                     <li>
                         <Link to="/">Home</Link>
                     </li>

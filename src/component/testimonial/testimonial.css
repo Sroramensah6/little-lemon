@@ -10,7 +10,17 @@
 
 .testimonial-title {
     font-family: 'Markazi Text';
-    font-size: 48px;
+    font-size: 38px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 16px;
+    min-height: 10rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .testimonial-card-body {
@@ -21,8 +31,9 @@
 }
 
 
-.testimonial-card-name {
+.testimonial-card-author {
     padding-left: 20px;
+    font-weight: bold;
 }
 
 .testimonial-card-section {

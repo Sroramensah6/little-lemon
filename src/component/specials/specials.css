@@ -1,5 +1,5 @@
 #special {
-    margin-top: 10rem;
+    margin-top: 7rem;
 }
 
 .special-card-section {
@@ -11,10 +11,12 @@
 }
 
 .special-header {
-    width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    grid-column-gap: 2rem;
+    grid-template: "info image";
+    grid-template-columns: 85fr 15fr;
+    margin-bottom: 2rem;
 }
 
 .food-card {
@@ -23,7 +25,8 @@
 
 .special-title {
     font-family: 'Markazi Text';
-    font-size: 48px;
+    font-size: 38px;
+    line-height: 10px;
 }
 
 @media (max-width: 1000px){

@@ -5,6 +5,7 @@ import Image from '../image'
 import Button from '../button'
 import Container from '../container'
 import { restaurant_food } from '../../assets'
+import { Link } from 'react-router-dom'
 
 function Hero() {
     return (
@@ -28,7 +29,9 @@ function Hero() {
                     </section>
                 </section>
                 <section className="hero-btn-box">
-                    <Button title={"Reserve a table"} />
+                    <Link to='/booking' className='link'>
+                        <Button title={"Reserve a table"} />
+                    </Link>
                 </section>
             </Container>
         </section>

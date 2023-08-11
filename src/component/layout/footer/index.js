@@ -1,84 +1,36 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { logoWhite } from '../../../assets'
+
+import './footer.css'
 
 function Footer() {
     return (
-        <footer id="footer" className="container">
-            <section>
-                <h5>Doormat Navigation</h5>
-                <ul>
-                    <li>
-                        <Link to="/">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <a href="#">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            menu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Reservations
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Order Online
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Login
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h5>Contact</h5>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Address
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Phone number
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Email
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h5>Social Media Links</h5>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Address
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Phone number
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Email
-                        </a>
-                    </li>
-                </ul>
-            </section>
+        <footer className="footer">
+          <div className="footer-container">
+            <img className="footer-logo" src={logoWhite} alt="logo-footer"></img>
+            <div className="footer-site-map">
+              <p className="footer-title"> SITEMAP</p>
+              <Link className="footer-item" to="/">Home</Link>
+              <Link className="footer-item" to="/about">About</Link>
+              <Link className="footer-item" to="/menu">Menu</Link>
+              <Link className="footer-item" to="/reservations">Reservations</Link>
+              <Link className="footer-item" to="/order-online">Order Online</Link>
+              <Link className="footer-item" to="/login">Login</Link>
+            </div>
+            <div className="footer-contact">
+              <p className="footer-title"> CONTACT</p>
+              <p className="footer-item"> 123 Citrus Lane</p>
+              <p className="footer-item"> 123-456-7890</p>
+              <p className="footer-item"> little.lemon@lemon.com</p>
+            </div>
+            <div className="footer-social">
+              <p className="footer-title"> SOCIAL MEDIA LINKS</p>
+              <a className="footer-item" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a className="footer-item" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a className="footer-item" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+          </div>
         </footer>
     )
 }
