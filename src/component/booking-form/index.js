@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import Button from "../button"
 
 function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availableTimes }) {
@@ -20,6 +20,10 @@ function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availabl
             [name]: value,
         })
     }
+
+    const button_validation = useMemo(() => {
+        return Object.values(booking).every((value) => value)
+    }, [booking])
 
     return (
         <section className='form-container'>
@@ -89,7 +93,11 @@ function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availabl
                             <option value={'Anniversary'}>Anniversary</option>
                         </select>
                     </section>
-                    <Button type="submit" title="Make Your reservation" />
+                    <Button
+                        type="submit"
+                        disabled={!button_validation}
+                        title="Make Your reservation"
+                    />
                 </form>
             </section>
         </section>

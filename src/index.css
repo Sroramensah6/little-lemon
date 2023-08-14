@@ -149,18 +149,37 @@ a:hover{
 
 .btn {
   background-color: #F4C314;
+  font-weight: bold;
+  border: 0.1875rem solid #f4ce14;
   border: none;
-  padding: 17px;
+  padding: 0.5rem 1rem;
   width: auto;
-  font-size: 16px;
+  font-size: 1rem;
+  color: #495e57;
   cursor: pointer;
-  font-weight: 600;
   transition: all 0.5s;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  -ms-border-radius: 9px;
-  -o-border-radius: 9px;
-  border-radius: 9px;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn_disabled {
+  background-color: #77827e;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border: 0.1875rem solid #77827e;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.5s;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .card {

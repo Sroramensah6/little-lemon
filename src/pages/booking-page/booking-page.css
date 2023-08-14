@@ -10,8 +10,8 @@
 
 .reservation-card {
     /* background: #495e57; */
-    /* padding: 2rem; */
-    width: 50%;
+    padding: 1rem;
+    width: 100%;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
