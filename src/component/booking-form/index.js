@@ -73,6 +73,7 @@ function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availabl
                             placeholder="0"
                             name="number_of_guest"
                             onChange={handleInputChange}
+                            aria-label="Number of guests"
                             value={booking.number_of_guest}
                             className={isFormSubmitted && !booking.number_of_guest ? "error" : ""}
                         />
@@ -84,6 +85,7 @@ function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availabl
                             id="occasion"
                             aria-required
                             name="occasion"
+                            aria-label="Occasion"
                             value={booking.occasion}
                             onChange={handleInputChange}
                             className={isFormSubmitted && !booking.occasion ? "error" : ""}
@@ -95,6 +97,7 @@ function BookingForm({ onSubmit, isFormSubmitted, dispatchOnDateChange, availabl
                     </section>
                     <Button
                         type="submit"
+                        aria-label="On Click"
                         disabled={!button_validation}
                         title="Make Your reservation"
                     />
