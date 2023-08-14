@@ -1,38 +1,96 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import Container from '../../container'
 import { logoWhite } from '../../../assets'
 
 import './footer.css'
 
 function Footer() {
-    return (
-        <footer className="footer">
-          <div className="footer-container">
-            <img className="footer-logo" src={logoWhite} alt="logo-footer"></img>
-            <div className="footer-site-map">
-              <p className="footer-title"> SITEMAP</p>
-              <Link className="footer-item" to="/">Home</Link>
-              <Link className="footer-item" to="/about">About</Link>
-              <Link className="footer-item" to="/menu">Menu</Link>
-              <Link className="footer-item" to="/reservations">Reservations</Link>
-              <Link className="footer-item" to="/order-online">Order Online</Link>
-              <Link className="footer-item" to="/login">Login</Link>
-            </div>
-            <div className="footer-contact">
-              <p className="footer-title"> CONTACT</p>
-              <p className="footer-item"> 123 Citrus Lane</p>
-              <p className="footer-item"> 123-456-7890</p>
-              <p className="footer-item"> little.lemon@lemon.com</p>
-            </div>
-            <div className="footer-social">
-              <p className="footer-title"> SOCIAL MEDIA LINKS</p>
-              <a className="footer-item" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a className="footer-item" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a className="footer-item" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-            </div>
-          </div>
-        </footer>
-    )
+  return (
+    <footer id="footer" className="primary-background">
+      <Container>
+        <section className='img-footer'>
+          <img src={logoWhite} alt='logo' />
+        </section>
+        <section>
+          <h5>Doormat Navigation</h5>
+          <ul>
+            <li>
+              <Link to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Reservations
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Order Online
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Login
+              </Link>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h5>Contact</h5>
+          <ul>
+            <li>
+              <Link to="/">
+                Address
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Phone number
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Email
+              </Link>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h5>Social Media Links</h5>
+          <ul>
+            <li>
+              <Link to="/">
+                Address
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Phone number
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Email
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </Container>
+    </footer>
+  )
 }
 
 export default Footer

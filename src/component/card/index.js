@@ -2,9 +2,9 @@ import React from 'react'
 
 function Card ({ className, children }) {
     return (
-        <section className={`inner-card ${className}`}>
+        <article className={`card ${className}`}>
             {children}
-        </section>
+        </article>
     )
 }
 

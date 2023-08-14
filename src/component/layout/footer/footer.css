@@ -4,6 +4,23 @@
     width: 100%;
 }
 
+.img-footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+}
+
+.img-footer > img {
+    top: 50%;
+    max-height: 15rem;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-right: 3rem;
+    padding: 0.5rem;
+}
+
 .footer-container {
     display: grid;
     padding: 2rem 0;
@@ -54,16 +71,15 @@
     animation-duration: 1s;
 }
 
-@keyframes colorChange {
-    0% {
-        color: white;
-    }
-    100% {
-        color: #f4ce14;
-    }
-    }
 
-    @media screen and (max-width: 767px) {
+@media (max-width: 600px){
+    .img-footer > img {
+        max-height: 15rem;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .footer {
         background: #495e57;
         height: 100%;

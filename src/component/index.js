@@ -1,5 +1,6 @@
 export { default as Hero} from './hero'
 export { default as About} from './about'
+export { default as Modal } from './modal'
 export { default as Layout } from './layout'
 export { default as Specials } from './specials'
 export { default as Testimonial } from './testimonial'

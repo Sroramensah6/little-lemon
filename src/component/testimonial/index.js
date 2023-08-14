@@ -8,8 +8,8 @@ import { testimonial_data } from '../../data'
 
 function Testimonial() {
     return (
-        <section id="testimonial" className='secondary-background2'>
-            <Container className="testimonial-container">
+        <section id="testimonial" className='primary-background'>
+            <Container className="container">
                 <section className='testimonial-header'>
                     <h1 className='testimonial-title'>Testimonials</h1>
                 </section>

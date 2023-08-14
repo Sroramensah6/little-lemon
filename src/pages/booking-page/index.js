@@ -1,44 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import React, { useReducer, useState } from 'react'
 
-import { fetchAPI } from '../../util'
-import { BookingForm } from '../../component'
+import './booking-page.css'
+import { fetchAPI, submitAPI } from '../../util'
+import { BookingForm, Modal } from '../../component'
 
-// const reducer = (state, action) => {
-//     switch (action.type) {
-//         case "2023-08-02":
-//             return {
-//                 option: [
-//                     "17:00",
-//                     "18:00",
-//                     "19:00",
-//                     "20:00",
-//                 ],
-//             }
-//         case "2023-08-03":
-//             return {
-//                 option: [
-//                     "20:00",
-//                     "21:00",
-//                     "22:00",
-//                 ],
-//             }
-//       default:
-//         return state;
-//     }
-// };
-
-
-// const initializeTimes = {
-//     option: [
-//         "17:00",
-//         "18:00",
-//         "19:00",
-//         "20:00",
-//         "21:00",
-//         "22:00",
-//     ],
-// }
 function BookingPage () {
+    const navigate = useNavigate();
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
     const initializeTimes = (initialAvailableTimes) => [
         ...initialAvailableTimes,
         ...fetchAPI(new Date()),
@@ -50,9 +21,15 @@ function BookingPage () {
 
     const [availableTimes, dispatchOnDateChange] = useReducer(updateTimes, [], initializeTimes)
 
-    const handleSubmit = (e, booking,) => {
+    const handleSubmit = (e, booking) => {
         e.preventDefault()
-        console.log(booking)
+        setIsFormSubmitted(true);
+        submitAPI(booking)
+        const areAllFieldsFilled = Object.values(booking).every(
+            (value) => value
+        )
+
+        if (areAllFieldsFilled) setIsModalVisible(true)
     }
 
     return (
@@ -62,9 +39,19 @@ function BookingPage () {
                     onSubmit={handleSubmit}
                     updateTimes={updateTimes}
                     availableTimes={availableTimes}
+                    isFormSubmitted={isFormSubmitted}
                     dispatchOnDateChange={dispatchOnDateChange}
                 />
             </main>
+            <Modal
+                onClose={() => {
+                    setIsModalVisible(false);
+                    navigate('/');
+                }}
+                visible={isModalVisible}
+                title="Reservation Completed!"
+                description="Thank you for choosing Little Lemon! Your reservation has been successfully made. You will receive a confirmation email with the details of your reservation. We are excited to see you soon!"
+            />
         </section>
     )
 }

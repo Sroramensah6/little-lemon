@@ -7,7 +7,7 @@ import { star } from '../../../assets'
 
 function TestimonialCard ({ img_url, name, body, rating }) {
     return (
-        <Card className={'testimonial-card'}>
+        <Card className={'card testimonial-card'}>
             <section className='card-container'>
                 <section className='card-rating'>
                     {rating &&

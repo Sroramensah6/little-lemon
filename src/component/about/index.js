@@ -9,7 +9,7 @@ import { chef, restaurant } from '../../assets'
 
 function About() {
     return (
-        <section id="about" className='primary-background'>
+        <section id="about" className='secondary-background'>
             <Container className="about-section">
                 <div className="about-text-box">
                     <header className="about-header">

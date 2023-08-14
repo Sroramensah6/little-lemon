@@ -1,13 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import './hero.css'
 
 import Image from '../image'
 import Button from '../button'
 import Container from '../container'
 import { restaurant_food } from '../../assets'
-import { Link } from 'react-router-dom'
 
 function Hero() {
+    const navigate = useNavigate();
     return (
         <section id="hero" className='primary-background'>
             <Container>
@@ -29,9 +31,7 @@ function Hero() {
                     </section>
                 </section>
                 <section className="hero-btn-box">
-                    <Link to='/booking' className='link'>
-                        <Button title={"Reserve a table"} />
-                    </Link>
+                    <Button onClick={() => navigate('/booking')} title={"Reserve a table"} />
                 </section>
             </Container>
         </section>

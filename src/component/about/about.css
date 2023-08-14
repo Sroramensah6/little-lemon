@@ -25,13 +25,13 @@
 }
 
 .about-header > h5{
-    color: #ffffff;
+    color: #000000;
     font-family: 'Markazi Text';
     font-size: 40px;
 }
 
 .about-text > p{
-    color: #ffffff;
+    color: #000000;
     font-family: 'karla';
     font-size: 23px;
 }
@@ -126,6 +126,7 @@
         display: grid;
         grid-template-columns: repeat(1, 12fr);
         gap: 0 1rem;
+        margin: 0 10px;
     }
     .about-text-box {
         margin-bottom: 2rem;

@@ -5,14 +5,15 @@ import BookingForm from '.'
 
 test('renders BookingForm component', () => {
   const onSubmit = jest.fn();
-  const updateTimes = jest.fn();
-  const availableTimes = {option:["12:00", "13:00", "14:00"]};
+  const dispatchOnDateChange = jest.fn();
+  const availableTimes = ["12:00", "13:00", "14:00"]
 
   render(
     <BookingForm
       onSubmit={onSubmit}
-      updateTimes={updateTimes}
+      isFormSubmitted={false}
       availableTimes={availableTimes}
+      dispatchOnDateChange={dispatchOnDateChange}
     />
   );
 
