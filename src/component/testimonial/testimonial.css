@@ -11,16 +11,21 @@
 .testimonial-title {
     font-family: 'Markazi Text';
     font-size: 38px;
+    color: white;
 }
 
 .testimonial-card {
-    background: white;
-    border-radius: 16px;
-    min-height: 10rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
+    display: flex;
+    overflow: hidden;
+    min-height: 10rem;
+    background: white;
+    flex-direction: column;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    border-radius: 16px;
 }
 
 .testimonial-card-body {
